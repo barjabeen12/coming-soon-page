@@ -589,3 +589,18 @@ h6,
 .footer .footer-menu a:hover {
     color: var(--secondary);
 }
+/* Remove margin on large screens */
+.container-xxl {
+    margin-left: 0;
+    margin-right: 0;
+    padding-left: 0;
+    padding-right: 0;
+}
+
+/* Optional: You can also override the padding for smaller screens if needed */
+@media (max-width: 576px) {
+    .container-xxl {
+        padding-left: 0;
+        padding-right: 0;
+    }
+}
