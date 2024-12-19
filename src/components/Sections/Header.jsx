@@ -5,8 +5,8 @@ import FullButton from "../Buttons/FullButton";
 // Assets
 import QuotesIcon from "../../assets/svg/Quotes";
 import Dots from "../../assets/svg/Dots";
-import Lottie from 'react-lottie';
-import animationData from '../../assets/lottie/hero';
+import Lottie from "react-lottie";
+import animationData from "../../assets/lottie/hero";
 
 export default function Header() {
   const [windowWidth, setWindowWidth] = React.useState(window.innerWidth);
@@ -15,10 +15,10 @@ export default function Header() {
     const handleResize = () => setWindowWidth(window.innerWidth);
 
     // Add event listener to track window resize
-    window.addEventListener('resize', handleResize);
+    window.addEventListener("resize", handleResize);
 
     // Clean up event listener
-    return () => window.removeEventListener('resize', handleResize);
+    return () => window.removeEventListener("resize", handleResize);
   }, []);
 
   const isMobile = windowWidth <= 768;
@@ -27,16 +27,21 @@ export default function Header() {
     autoplay: true,
     animationData: animationData,
     rendererSettings: {
-      preserveAspectRatio: "xMidYMid slice"
-    }
+      preserveAspectRatio: "xMidYMid slice",
+    },
   };
   return (
     <Wrapper id="home" className="container flexSpaceCenter">
       <LeftSide className="flexCenter">
         <div>
-          <h1 className="extraBold font60">We Build Digital Experiences That Inspire.</h1>
+          <h1 className="extraBold font60">
+            We Build Digital Experiences That Inspire.
+          </h1>
           <HeaderP className="font13 semiBold">
-          At FluxFrames, we bring ideas to life through cutting-edge web development, AI-driven solutions, and impactful video editing. Our mission is to deliver innovative, client-focused results that help your business stand out in today's competitive landscape.
+            At FluxFrames, we bring ideas to life through cutting-edge web
+            development, AI-driven solutions, and impactful video editing. Our
+            mission is to deliver innovative, client-focused results that help
+            your business stand out in today's competitive landscape.
           </HeaderP>
           <BtnWrapper>
             <FullButton title="Get Started Today" />
@@ -45,17 +50,15 @@ export default function Header() {
       </LeftSide>
       <RightSide>
         <ImageWrapper>
-         
-        <div className="lottie-container">
-        <Lottie
-        options={defaultOptions}
-        height={isMobile ? 290 : 457} // Adjust height for mobile
-        width={isMobile ? 380 : 626}  // Adjust width for mobile
-        style={{ zIndex: 9 }}
-      />
-    </div>
-         
-       
+          <div className="lottie-container">
+            <Lottie
+              options={defaultOptions}
+              height={isMobile ? 290 : 457} // Adjust height for mobile
+              width={isMobile ? 380 : 626} // Adjust width for mobile
+              style={{ zIndex: 9 }}
+            />
+          </div>
+
           {/* <Img className="radius8" src={HeaderImage} alt="office" style={{zIndex: 9}} /> */}
           <QuoteWrapper className="flexCenter darkBg radius8">
             <QuotesWrapper>
@@ -65,7 +68,12 @@ export default function Header() {
               <p className="font15 whiteColor">
                 <em>Creativity is intelligence having fun.</em>
               </p>
-              <p className="font13 orangeColor textRight" style={{marginTop: '10px'}}>— Albert Einstein</p>
+              <p
+                className="font13 orangeColor textRight"
+                style={{ marginTop: "10px" }}
+              >
+                — Albert Einstein
+              </p>
             </div>
           </QuoteWrapper>
           <DotsWrapper>
@@ -77,7 +85,6 @@ export default function Header() {
     </Wrapper>
   );
 }
-
 
 const Wrapper = styled.section`
   padding-top: 80px;
@@ -181,5 +188,3 @@ const DotsWrapper = styled.div`
     display: none;
   }
 `;
-
-

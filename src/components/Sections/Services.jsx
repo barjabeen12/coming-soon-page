@@ -10,7 +10,9 @@ import AddImage2 from "../../assets/img/add/2.png";
 import AddImage3 from "../../assets/img/add/3.png";
 import AddImage4 from "../../assets/img/add/4.png";
 
+
 export default function Services() {
+
   return (
     <Wrapper id="services">
       <div className="lightBg" style={{ padding: "50px 0" }}>
@@ -43,7 +45,7 @@ export default function Services() {
             <ServiceBoxWrapper>
               <ServiceBox
                 icon="monitor"
-                title="Web Design"
+                title="Web Development"
                 subtitle="Creating responsive and visually stunning websites that enhance user experience and drive results. We specialize in custom web designs tailored to your business needs."
               />
             </ServiceBoxWrapper>
@@ -131,8 +133,10 @@ const Wrapper = styled.section`
   width: 100%;
 `;
 const ServiceBoxRow = styled.div`
+  margin-left: 10%;
   @media (max-width: 860px) {
     flex-direction: column;
+    margin-left: 0;
   }
 `;
 const ServiceBoxWrapper = styled.div`
